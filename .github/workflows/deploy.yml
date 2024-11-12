@@ -1,0 +1,21 @@
+name: Run PHP Script
+
+on:
+  push:
+    branches:
+      - main  # or any branch you prefer
+
+jobs:
+  run-php:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'  # or any PHP version you need
+
+      - name: Run PHP script
+        run: php www/test.php
