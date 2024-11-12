@@ -18,4 +18,4 @@ jobs:
           php-version: '7.4'  # or any PHP version you need
 
       - name: Run PHP script
-        run: php www/test.php
+        run: php test.php
